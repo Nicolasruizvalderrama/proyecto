@@ -3,7 +3,7 @@ using namespace std;
 int contrasena=78082;
 	void LLenarMostrar(){
 			int VectorA[7],num;
-				int VectorB[7];
+				int VectorB[7],aux;
 					for(int i=0;i<7;i++){
 						cout<<"ingrese el valor de la posicion:"<<i+1<<endl;
 						cin>>num;
@@ -20,13 +20,26 @@ int contrasena=78082;
 						
 						
 					}	
-					for (int i=6;i>=0;i--){
-						VectorB[i]=VectorA[0];
+					for (int i=0;i>7;i++){
+						VectorB[i]=VectorA[i];
+						
 					}
+					
+					for(int i=0;i<7;i++){
+		for(int j=0;j<7;j++){
+			if(VectorB[j] > VectorB[j+1]){
+				aux = VectorB[j];
+				VectorB[j] =VectorB[j+1];
+				VectorB[j+1] = aux;
+			}
+		}
+	}	
 					cout<<"Los valores guardados en cada posicion del arreglo B son"<<endl;	
-					for(int i=6;i>=0;i--){
-						cout<<i<<"->"<<VectorA[i]<<endl;
-					}
+				
+			for(int i=6;i>=0;i--){
+					cout<<i+1<<"->"<<VectorB[i]<<endl;
+			
+		}
 	}
 
 
