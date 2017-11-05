@@ -7,7 +7,7 @@ int contrasena=78082;
 					for(int i=0;i<7;i++){
 						cout<<"ingrese el valor de la posicion:"<<i+1<<endl;
 						cin>>num;
-						if(num>=20&&num<=40){
+						if(num>=20&&num<=40&&num%2==0){
 							VectorA[i]=num;
 						}
 					else{
