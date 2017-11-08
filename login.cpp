@@ -14,33 +14,31 @@ int contrasena=78082;
 						VectorA[i]=0;
 					}
 					}
-			cout<<"los valores que guardaste en cada posicion son:\n"<<endl;
+			cout<<"los valores que guardaste en cada posicion del arreglo A son:\n"<<endl;
 					for(int i=0;i<7;i++){
 					cout<<i+1<<"->"<<VectorA[i]<<endl;
 						
-						
-					}	
-					for (int i=0;i>7;i++){
-						VectorB[i]=VectorA[i];
-						
 					}
 					
+					 int p=6;//esta lleva la cuenta de las posiciones
+					
 					for(int i=0;i<7;i++){
-		for(int j=0;j<7;j++){
-			if(VectorB[j] > VectorB[j+1]){
-				aux = VectorB[j];
-				VectorB[j] =VectorB[j+1];
-				VectorB[j+1] = aux;
-			}
-		}
-	}	
+						VectorB[i]=VectorA[p];
+						p--;
+						}
+						
+						
+				
 					cout<<"Los valores guardados en cada posicion del arreglo B son"<<endl;	
 				
-			for(int i=6;i>=0;i--){
+			for(int i=0;i<7;i++){
 					cout<<i+1<<"->"<<VectorB[i]<<endl;
 			
+			}
+	
 		}
-	}
+	
+	
 
 
 int main(){
