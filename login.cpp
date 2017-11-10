@@ -1,9 +1,11 @@
 #include <iostream>
+#include <stdlib.h> 
 using namespace std;
 int contrasena=78082;
 	void LLenarMostrar(){
 			int VectorA[7],num;
-				int VectorB[7],aux;
+				int VectorB[7],VectorR[7];
+				
 					for(int i=0;i<7;i++){
 						cout<<"ingrese el valor de la posicion:"<<i+1<<endl;
 						cin>>num;
@@ -20,7 +22,7 @@ int contrasena=78082;
 						
 					}
 					
-					 int p=6;//esta lleva la cuenta de las posiciones
+					 int p=6;//esta lleva la cuenta de las posiciones del arreglo A
 					
 					for(int i=0;i<7;i++){
 						VectorB[i]=VectorA[p];
@@ -31,16 +33,21 @@ int contrasena=78082;
 				
 					cout<<"Los valores guardados en cada posicion del arreglo B son"<<endl;	
 				
-			for(int i=0;i<7;i++){
+				for(int i=0;i<7;i++){
 					cout<<i+1<<"->"<<VectorB[i]<<endl;
 			
 			}
+			
+				for(int i=0;i<7;i++){
+					VectorR[i]=VectorA[i]-VectorB[i];
+				}
+				cout<<"Los resultados guardados en cada posicion del arreglo R son"<<endl;
+				for(int i=0;i<7;i++){
+						cout<<i+1<<"->"<<VectorR[i]<<endl;
+				}
 	
 		}
 	
-	
-
-
 int main(){
 	int claveusuario;
 	int opc;
@@ -57,6 +64,7 @@ int main(){
 			cout<<"contresena incorrecta"<<endl;
 		}
 	}while(claveusuario!=contrasena);
+	system("cls"); 
 
 cout<<"bienvenid@"<<endl;
 	
@@ -68,11 +76,17 @@ cout<<"bienvenid@"<<endl;
 		cout<<"5.Manejo de cadenas"<<endl;
 		cout<<"6.Salir"<<endl;
 		cin>>opc;
+		system("cls"); 
+		
+		
 		switch(opc){
 			case 1:{
 				LLenarMostrar();
-			
+				 system ("PAUSE");
+				 system("cls"); 
+				 
 				break;
+				
 			}
 		}
 	}while(opc!=6); 
